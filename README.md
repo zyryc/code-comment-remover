@@ -49,7 +49,7 @@ Visit the live application: [Your Live URL Here]
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/code-comment-remover.git
+git clone https://github.com/zyryc/code-comment-remover.git
 cd code-comment-remover
 ```
 
@@ -186,8 +186,8 @@ SOFTWARE.
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@YOUR-USERNAME](https://github.com/zyryc)
-- Website: [yourwebsite.com](https://github.com/zyryc)
+- GitHub: [@zyrc](https://github.com/zyryc)
+- Website: [github.com/zyryc](https://github.com/zyryc)
 
 ## 🙏 Acknowledgments
 

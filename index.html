@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code Comment Remover - Remove Comments from Code Online | Free Tool</title>
+  <meta name="description"
+    content="Free online tool to remove comments from code. Supports C, C++, Java, JavaScript, Python, HTML, and XML. Clean your code instantly with our comment removal tool." />
+  <meta name="keywords"
+    content="remove comments, code cleaner, comment remover, clean code, strip comments, C++, Java, JavaScript, Python, HTML" />
+  <meta name="author" content="Code Comment Remover" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Code Comment Remover - Remove Comments from Code Online" />
+  <meta property="og:description"
+    content="Free online tool to remove comments from code. Supports multiple programming languages including C, C++, Java, JavaScript, Python, and HTML." />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Code Comment Remover - Free Online Tool" />
+  <meta name="twitter:description"
+    content="Remove comments from code instantly. Supports C, C++, Java, JavaScript, Python, HTML, and XML." />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://yourwebsite.com/comment-remover" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background: linear-gradient(135deg, #691b 0%, #7649a2 100%);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .container {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      color: #333;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 1.1em;
+    }
+
+    .info-section {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      border-left: 4px solid #667eea;
+    }
+
+    .info-section h2 {
+      color: #333;
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+
+    .info-section p {
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .feature {
+      background: white;
+      padding: 15px;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+    }
+
+    .feature h3 {
+      color: #667eea;
+      font-size: 1em;
+      margin-bottom: 5px;
+    }
+
+    .feature p {
+      color: #666;
+      font-size: 0.9em;
+      margin: 0;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #333;
+      font-size: 1em;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 6px;
+      font-size: 16px;
+      background: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    select:hover {
+      border-color: #667eea;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    textarea {
+      width: 100%;
+      height: 300px;
+      padding: 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 6px;
+      font-family: 'Courier New', Consolas, monospace;
+      font-size: 14px;
+      resize: vertical;
+      transition: all 0.3s ease;
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    textarea::placeholder {
+      color: #aaa;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    button {
+      flex: 1;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      background: #6c757d;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+
+    .btn-copy {
+      background: #28a745;
+      color: white;
+    }
+
+    .btn-copy:hover {
+      background: #218838;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 15px;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 6px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #667eea;
+    }
+
+    .stat-label {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 5px;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #28a745;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 6px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateY(100px);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      color: #666;
+    }
+
+    footer a {
+      color: #667eea;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .button-group {
+        flex-direction: column;
+      }
+
+      .stats {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>🧹 Code Comment Remover</h1>
+    <p class="subtitle">Free online tool to remove comments from your code instantly</p>
+
+    <div class="info-section">
+      <h2>Why Remove Code Comments?</h2>
+      <p>Remove comments from your code to reduce file size, prepare code for minification, or clean up code for
+        production deployment. Our tool supports multiple programming languages and preserves your code structure.</p>
+
+      <div class="features">
+        <div class="feature">
+          <h3>⚡ Fast Processing</h3>
+          <p>Instantly remove comments from code of any size</p>
+        </div>
+        <div class="feature">
+          <h3>🔒 Private & Secure</h3>
+          <p>All processing happens in your browser</p>
+        </div>
+        <div class="feature">
+          <h3>🌐 Multi-Language</h3>
+          <p>Supports C, C++, Java, JavaScript, Python, HTML & more</p>
+        </div>
+        <div class="feature">
+          <h3>💯 Free Forever</h3>
+          <p>No registration, no limits, completely free</p>
+        </div>
+      </div>
+    </div>
+
+    <label for="language">Select Programming Language:</label>
+    <select id="language" aria-label="Select programming language">
+      <option value="c-style">C / C++ / Java / JavaScript / CSS</option>
+      <option value="python">Python</option>
+      <option value="html">HTML / XML</option>
+    </select>
+
+    <label for="input">Paste Your Code Here:</label>
+    <textarea id="input" placeholder="Paste your code here and click 'Remove Comments' to clean it..."
+      aria-label="Input code"></textarea>
+
+    <div class="button-group">
+      <button class="btn-primary" onclick="removeComments()" aria-label="Remove comments from code">Remove
+        Comments</button>
+      <button class="btn-secondary" onclick="clearAll()" aria-label="Clear all text">Clear All</button>
+    </div>
+
+    <label for="output">Cleaned Code:</label>
+    <textarea id="output" readonly placeholder="Your cleaned code will appear here..."
+      aria-label="Output code"></textarea>
+
+    <div class="button-group">
+      <button class="btn-copy" onclick="copyToClipboard()" id="copyBtn" disabled aria-label="Copy to clipboard">📋 Copy
+        to Clipboard</button>
+    </div>
+
+    <div class="stats" id="stats" style="display: none;">
+      <div class="stat">
+        <div class="stat-value" id="originalLines">0</div>
+        <div class="stat-label">Original Lines</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="cleanedLines">0</div>
+        <div class="stat-label">Cleaned Lines</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="reduction">0%</div>
+        <div class="stat-label">Size Reduction</div>
+      </div>
+    </div>
+
+    <footer>
+      <p><strong>How to use:</strong> Select your programming language, paste your code, and click "Remove Comments" to
+        instantly clean your code.</p>
+      <p>Supported languages: C, C++, Java, JavaScript, TypeScript, CSS, Python, HTML, XML</p>
+      <p style="margin-top: 15px;">Need help? <a href="#about">About this tool</a> | <a href="#contact">Contact</a></p>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+
+  <script>
+    function removeComments() {
+      const lang = document.getElementById('language').value;
+      const input = document.getElementById('input').value;
+
+      if (!input.trim()) {
+        showToast('Please paste some code first!', 'error');
+        return;
+      }
+
+      let output = '';
+
+      try {
+        switch (lang) {
+          case 'c-style':
+            output = removeCStyleComments(input);
+            break;
+          case 'python':
+            output = removePythonComments(input);
+            break;
+          case 'html':
+            output = removeHtmlComments(input);
+            break;
+          default:
+            output = input;
+        }
+
+        document.getElementById('output').value = output;
+        document.getElementById('copyBtn').disabled = false;
+        updateStats(input, output);
+        showToast('Comments removed successfully!', 'success');
+      } catch (error) {
+        showToast('An error occurred while processing the code.', 'error');
+        console.error(error);
+      }
+    }
+
+    function removeCStyleComments(code) {
+      let inBlockComment = false;
+      let inLineComment = false;
+      let inString = false;
+      let inChar = false;
+      let stringChar = '';
+      let result = '';
+
+      for (let i = 0; i < code.length; i++) {
+        const ch = code[i];
+        const nextCh = code[i + 1];
+
+        // Handle string literals
+        if (!inBlockComment && !inLineComment) {
+          if ((ch === '"' || ch === "'") && (i === 0 || code[i - 1] !== '\\')) {
+            if (!inString && !inChar) {
+              inString = ch === '"';
+              inChar = ch === "'";
+              stringChar = ch;
+            } else if ((inString && ch === '"') || (inChar && ch === "'")) {
+              inString = false;
+              inChar = false;
+            }
+          }
+        }
+
+        // Skip comment detection inside strings
+        if (inString || inChar) {
+          result += ch;
+          continue;
+        }
+
+        // Handle block comments
+        if (!inBlockComment && !inLineComment && ch === '/' && nextCh === '*') {
+          inBlockComment = true;
+          i++;
+          continue;
+        } else if (inBlockComment && ch === '*' && nextCh === '/') {
+          inBlockComment = false;
+          i++;
+          continue;
+        }
+
+        // Handle line comments
+        if (!inBlockComment && !inLineComment && ch === '/' && nextCh === '/') {
+          inLineComment = true;
+          i++;
+          continue;
+        } else if (inLineComment && ch === '\n') {
+          inLineComment = false;
+          result += ch;
+          continue;
+        }
+
+        // Add character if not in a comment
+        if (!inBlockComment && !inLineComment) {
+          result += ch;
+        }
+      }
+
+      return result;
+    }
+
+    function removePythonComments(code) {
+      let inTripleSingle = false;
+      let inTripleDouble = false;
+      let inSingleQuote = false;
+      let inDoubleQuote = false;
+      let result = '';
+      let i = 0;
+
+      while (i < code.length) {
+        const ch = code[i];
+        const next3 = code.substring(i, i + 3);
+
+        // Handle triple quotes
+        if (!inSingleQuote && !inDoubleQuote) {
+          if (next3 === "'''" && !inTripleDouble) {
+            if (!inTripleSingle) {
+              inTripleSingle = true;
+              result += next3;
+              i += 3;
+              continue;
+            } else {
+              inTripleSingle = false;
+              result += next3;
+              i += 3;
+              continue;
+            }
+          } else if (next3 === '"""' && !inTripleSingle) {
+            if (!inTripleDouble) {
+              inTripleDouble = true;
+              result += next3;
+              i += 3;
+              continue;
+            } else {
+              inTripleDouble = false;
+              result += next3;
+              i += 3;
+              continue;
+            }
+          }
+        }
+
+        // Handle regular quotes
+        if (!inTripleSingle && !inTripleDouble) {
+          if (ch === "'" && (i === 0 || code[i - 1] !== '\\') && !inDoubleQuote) {
+            inSingleQuote = !inSingleQuote;
+          } else if (ch === '"' && (i === 0 || code[i - 1] !== '\\') && !inSingleQuote) {
+            inDoubleQuote = !inDoubleQuote;
+          }
+        }
+
+        // Handle comments
+        if (!inTripleSingle && !inTripleDouble && !inSingleQuote && !inDoubleQuote) {
+          if (ch === '#') {
+            while (i < code.length && code[i] !== '\n') i++;
+            if (i < code.length) result += code[i];
+            i++;
+            continue;
+          }
+        }
+
+        // Skip docstrings
+        if (inTripleSingle || inTripleDouble) {
+          i++;
+          continue;
+        }
+
+        result += ch;
+        i++;
+      }
+
+      return result;
+    }
+
+    function removeHtmlComments(code) {
+      return code.replace(/<!--[\s\S]*?-->/g, '');
+    }
+
+    function clearAll() {
+      document.getElementById('input').value = '';
+      document.getElementById('output').value = '';
+      document.getElementById('copyBtn').disabled = true;
+      document.getElementById('stats').style.display = 'none';
+    }
+
+    function copyToClipboard() {
+      const output = document.getElementById('output');
+      output.select();
+      document.execCommand('copy');
+      showToast('Copied to clipboard!', 'success');
+    }
+
+    function showToast(message, type) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.style.background = type === 'error' ? '#dc3545' : '#28a745';
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    function updateStats(original, cleaned) {
+      const originalLines = original.split('\n').length;
+      const cleanedLines = cleaned.split('\n').length;
+      const reduction = Math.round(((original.length - cleaned.length) / original.length) * 100);
+
+      document.getElementById('originalLines').textContent = originalLines;
+      document.getElementById('cleanedLines').textContent = cleanedLines;
+      document.getElementById('reduction').textContent = reduction + '%';
+      document.getElementById('stats').style.display = 'flex';
+    }
+
+    // Add keyboard shortcuts
+    document.addEventListener('keydown', function (e) {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+        removeComments();
+      }
+    });
+  </script>
+</body>
+
+</html>
